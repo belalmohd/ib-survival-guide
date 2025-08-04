@@ -1,0 +1,282 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background: #f7f8fa;
+    color: #222;
+    min-height: 100vh;
+}
+
+/* Header and navigation */
+header {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #1e88e5;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    transition: background .2s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background: #e3f2fd;
+    color: #1e88e5;
+}
+
+/* Main content */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(90deg, #1e88e5 0%, #6ab7ff 100%);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 14px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta {
+    display: inline-block;
+    background: #fff;
+    color: #1e88e5;
+    font-weight: bold;
+    padding: .75rem 2rem;
+    border-radius: 24px;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    transition: background .2s, color .2s;
+}
+
+.cta:hover {
+    background: #1e88e5;
+    color: #fff;
+}
+
+/* Features section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.features div {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(30,136,229,0.09);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform .15s;
+}
+
+.features div:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 6px 18px rgba(30,136,229,0.12);
+}
+
+/* Card styles */
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(30,136,229,0.09);
+    padding: 1.5rem;
+    transition: transform .15s;
+}
+
+.card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 6px 18px rgba(30,136,229,0.12);
+}
+
+.card h3 {
+    color: #1e88e5;
+    margin-bottom: .5rem;
+}
+
+.card p {
+    color: #444;
+}
+
+/* Materials list */
+.materials-list {
+    list-style: none;
+    padding: 0;
+}
+
+.materials-list li {
+    margin-bottom: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(30,136,229,0.07);
+    padding: .75rem 1.25rem;
+    transition: background .2s;
+}
+
+.materials-list li:hover {
+    background: #e3f2fd;
+}
+
+.materials-list a {
+    color: #1e88e5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Content section */
+.content h1 {
+    margin-bottom: 1.1rem;
+    color: #1e88e5;
+    font-weight: bold;
+}
+
+.content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+/* Q&A and forms */
+#qa-form,
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    max-width: 400px;
+}
+
+#qa-form input,
+#contact-form input,
+#contact-form textarea {
+    padding: .8rem 1rem;
+    border: 1px solid #cfd8dc;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+    outline: none;
+    transition: border .2s;
+}
+
+#contact-form textarea {
+    min-height: 80px;
+    max-height: 180px;
+}
+
+#qa-form input:focus,
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #1e88e5;
+}
+
+#qa-form button,
+#contact-form button {
+    background: #1e88e5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: .8rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+#qa-form button:hover,
+#contact-form button:hover {
+    background: #1565c0;
+}
+
+/* Q&A List */
+#qa-list ul {
+    list-style: disc;
+    margin-left: 2rem;
+    color: #222;
+}
+
+#qa-list li {
+    margin-bottom: .7rem;
+}
+
+footer {
+    background: #fff;
+    color: #999;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid #ececec;
+    font-size: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    main {
+        padding: .5rem;
+    }
+    .hero {
+        padding: 1rem;
+    }
+    .features {
+        grid-template-columns: 1fr;
+    }
+    .card-list {
+        grid-template-columns: 1fr;
+    }
+}
