@@ -5,6 +5,26 @@
     <title>Advice - IB Survival Guide</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .card-title {
+            cursor: pointer;
+            color: #1e88e5;
+            margin-bottom: .5rem;
+            transition: color 0.2s;
+        }
+        .card-title:hover {
+            color: #1565c0;
+            text-decoration: underline;
+        }
+        .card-content {
+            display: none;
+            margin-top: 1rem;
+            color: #444;
+        }
+        .card.active .card-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,25 +42,85 @@
         <section class="content">
             <h1>Advice Articles</h1>
             <div class="card-list">
+
                 <div class="card">
-                    <h3>How to Balance IB Life</h3>
-                    <p>Tips for managing time and stress from experienced IB students.</p>
+                    <h3 class="card-title">How to Balance IB Life</h3>
+                    <div class="card-content">
+                        <ul>
+                            <li>Create a weekly schedule that includes school, CAS, studying, and little breaks here and there.</li>
+                            <li>Learn to avoid distractions and unnecessary commitments.</li>
+                            <li>Prioritize sleep for at least 6 hours per day.</li>
+                            <li>Turn on DND (Do Not Disturb) during your study sessions.</li>
+                            <li>Use tools such as Google Calendar to tick down your daily plans for better organization.</li>
+                            <li>When things start to feel overwhelming or stressful, feel free to talk to others — you’re not in this alone.</li>
+                            <li>Reflect weekly on what you have achieved: What worked for you? What stressed you out? How can this be fixed?</li>
+                        </ul>
+                    </div>
                 </div>
+
                 <div class="card">
-                    <h3>Top Study Strategies</h3>
-                    <p>Methods to help you study smarter, not harder.</p>
+                    <h3 class="card-title">Top Study Strategies</h3>
+                    <div class="card-content">
+                        <ul>
+                            <li>
+                                <b>Math (Group 5):</b> Understand the concept first, then apply it. Use YouTube channels or textbooks, then practice with past papers.
+                            </li>
+                            <li>
+                                <b>English/Language and Literature (Group 1):</b> Master written analysis for Papers 1 and 2 by writing essays and analyzing texts. Pair this with reading your school’s novels.
+                            </li>
+                            <li>
+                                <b>Science:</b> Focus on understanding concepts, not just memorizing. Watch channels like Sirus Revision, and practice with SaveMyExams or past papers. IB exams are based on understanding and critical thinking.
+                            </li>
+                            <li>
+                                <b>Business, Econ, History (Group 3):</b> Aim for deep understanding. For Business, grasp theories and vocabulary, then apply them in case studies or past papers.
+                            </li>
+                            <li>
+                                <b>Language SL or ab initio (Group 2):</b> Immerse yourself in the language—listen to podcasts, watch shows, and use the language as if traveling. The more you use it, the more comfortable you’ll become.
+                            </li>
+                        </ul>
+                        <p>
+                            For more in-depth information about these subjects, check out our <a href="materials.html">subject resources</a>.
+                        </p>
+                    </div>
                 </div>
+
                 <div class="card">
-                    <h3>Exam Preparation</h3>
-                    <p>How to prepare for IB exams and maximize your scores.</p>
+                    <h3 class="card-title">The Forgotten Resource</h3>
+                    <div class="card-content">
+                        <p>
+                            The IB subject guide is perhaps the most underrated tool in your entire IB journey. Think of it as the official blueprint of what the examiners expect you to know — nothing more, nothing less.
+                        </p>
+                        <ul>
+                            <li>
+                                Reading the subject guide before starting a topic gives you a clear map of where you’re headed. For example, in Physics, it tells you the exact equations you’re expected to use; in English, it outlines the assessment criteria; in Business, it specifies vocabulary and concepts that will appear on the exam.
+                            </li>
+                            <li>
+                                Use it like a checklist: learn each point, practice it, then tick it off. Pair it with past paper questions to ensure you’re applying exactly what’s required.
+                            </li>
+                            <li>
+                                Remember, IB exams are written from these guides, so mastering them means you’re already a step ahead.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- Add more cards as you like! -->
+
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2025 IB Survival Guide</p>
     </footer>
+    <script>
+        // Card expand/collapse logic
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.card-title').forEach(function(title) {
+                title.addEventListener('click', function() {
+                    const card = title.parentElement;
+                    card.classList.toggle('active');
+                });
+            });
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
